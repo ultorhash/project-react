@@ -6,7 +6,7 @@ export class NavSearchInput extends Component
     render()
     {
         return (
-            <StyledNavSearchInput type="text"/>
+            <StyledNavSearchInput type="text" placeholder="Search Legalcluster"/>
         )
     }
 }

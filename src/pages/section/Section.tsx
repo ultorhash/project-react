@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { StyledSection } from './SectionStyle';
+import { Aside } from '../aside/aside/Aside';
 
 export class Section extends Component
 {
@@ -7,7 +8,7 @@ export class Section extends Component
     {
         return (
             <StyledSection>
-                
+                <Aside />
             </StyledSection>
         )
     }

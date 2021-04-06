@@ -10,7 +10,9 @@ export class MainContainer extends Component
         return (
             <>
                 <Nav />
-                <Section />
+                <Section>
+                    
+                </Section>
             </>
         )
     }
