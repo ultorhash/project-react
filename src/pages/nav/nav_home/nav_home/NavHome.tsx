@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { StyledNavMenuList } from './NavMenuListStyle';
-import { PageLogo } from './page_logo/PageLogo';
-import { DropDownHome } from './drop_down/DropDownHome';
+import { StyledNavMenuList } from './NavHomeStyle';
+import { PageLogo } from '../page_logo/PageLogo';
+import { DropDownHome } from '../menu/menu/Menu';
 
 export class NavMenuList extends Component
 {

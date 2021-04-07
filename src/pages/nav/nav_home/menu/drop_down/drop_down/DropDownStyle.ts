@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledDropDownMenu = styled.div`
-    background-color: red;
+    background-color: purple;
     height: 200px;
     position: absolute;
     top: 100%;

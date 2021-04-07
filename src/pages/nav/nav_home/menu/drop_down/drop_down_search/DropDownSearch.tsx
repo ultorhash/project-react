@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { StyledDropDownMenuSearch } from './SearchStyle';
+import { StyledDropDownMenuSearch } from './DropDownSearchStyle';
 
 export class DropDownMenuSearch extends Component
 {

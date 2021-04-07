@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { Nav } from '../nav/nav/Nav';
-import { Section } from '../section/Section';
+import { Section } from '../section/section/Section';
 
 export class MainContainer extends Component
 {
