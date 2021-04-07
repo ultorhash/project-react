@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledDropDownHome = styled.div`
     width: 85%;
-    height: 100;
+    height: auto;
     display: flex;
     background-color: white;
     flex-direction: row;
@@ -12,4 +12,5 @@ export const StyledDropDownHome = styled.div`
     align-items: center;
     font-size: 24px;
     font-weight: bold;
+    position: relative;
 `;

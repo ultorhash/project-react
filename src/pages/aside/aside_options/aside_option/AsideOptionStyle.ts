@@ -10,7 +10,7 @@ export const StyledAsideOption = styled.a`
     text-decoration: none;
     color: dimgray;
     font-weight: 500;
-    margin: 20px 0 20px 0;
+    margin: 30px 0 30px 0;
 
     p {
         margin-left: 5%;
@@ -26,5 +26,6 @@ export const StyledAsideOption = styled.a`
         height: 100%;
         background-color: transparent;
         width: 15%;
+        margin-left: 5%;
     }
 `;
