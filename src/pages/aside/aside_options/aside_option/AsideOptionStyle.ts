@@ -12,7 +12,7 @@ export const StyledAsideOption = styled.a`
     font-weight: 500;
     margin: 30px 0 30px 0;
 
-    p {
+    span {
         margin-left: 5%;
         height: 100%;
         display: flex;
