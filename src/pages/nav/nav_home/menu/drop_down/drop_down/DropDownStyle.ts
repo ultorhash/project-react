@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledDropDownMenu = styled.div`
-    background-color: purple;
-    height: 200px;
+export const StyledDropDown = styled.div`
+    background-color: white;
+    height: auto;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 80%;
-    padding: 20px;
+    left: 15%;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
 `;

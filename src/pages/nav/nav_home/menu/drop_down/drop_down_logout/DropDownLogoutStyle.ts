@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledDropDownOption = styled.a`
+export const StyledDropDownLogout = styled.a`
     height: 20px;
     width: 100%;
     background-color: transparent;
@@ -10,7 +10,7 @@ export const StyledDropDownOption = styled.a`
     text-decoration: none;
     color: dimgray;
     font-weight: 500;
-    margin: 5% 0 5% 0;
+    margin: 5% 0 5% 25%;
 
     p {
         margin-left: 5%;
