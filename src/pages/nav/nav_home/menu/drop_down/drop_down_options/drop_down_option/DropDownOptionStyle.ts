@@ -18,7 +18,6 @@ export const StyledDropDownOption = styled.a`
         display: flex;
         align-items: center;
         background-color: transparent;
-        font-size: 20px;
         color: #2F4F4F;
         font-size: 16px;
     }

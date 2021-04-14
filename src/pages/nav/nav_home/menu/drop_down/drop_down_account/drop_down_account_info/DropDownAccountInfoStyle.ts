@@ -1,26 +1,25 @@
 import styled from 'styled-components';
 
-export const StyledAsideOption = styled.div`
-    height: 40px;
+export const StyledDropDownAccountInfo = styled.div`
+    height: 30px;
     width: 100%;
     background-color: transparent;
     display: flex;
     text-align: center;
     align-items: center;
+    text-decoration: none;
     color: dimgray;
     font-weight: 500;
-    margin: 30px 0 30px 0;
+    margin: 5% 0 5% 0;
 
-    a {
+    p {
         margin-left: 5%;
         height: 100%;
         display: flex;
         align-items: center;
         background-color: transparent;
-        font-size: 20px;
-        letter-spacing: 1px;
-        text-decoration: none;
-        color: dimgray;
+        color: #2F4F4F;
+        font-size: 16px;
     }
 
     img {
@@ -28,5 +27,13 @@ export const StyledAsideOption = styled.div`
         background-color: transparent;
         width: 15%;
         margin-left: 5%;
+        border-radius: 50%;
+    }
+
+    a {
+        text-decoration: none;
+        color: #6600ff;
+        font-size: 12px;
+        background-color: transparent;
     }
 `;

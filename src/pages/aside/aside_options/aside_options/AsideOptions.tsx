@@ -15,13 +15,13 @@ export class AsideOptions extends Component
         return (
             <Router>
                 <StyledAsideOptions>
-                    <Link to="/publications">
-                        <AsideOption imgLeft={publications} title="Publications"/>
+                    <Link to="/publications" style={{textDecoration: "none"}}>
+                        <AsideOption imgLeft={publications} title="Publications" />
                     </Link>
-                    <Link to="ecosystem">
+                    <Link to="/ecosystem" style={{textDecoration: "none"}}>
                         <AsideOption imgLeft={ecosystem} title="Ecosystem"/>
                     </Link>
-                    <Link to="entities">
+                    <Link to="/entities" style={{textDecoration: "none"}}>
                         <AsideOption imgLeft={entities} title="Entities"/>
                     </Link>
                 </StyledAsideOptions>

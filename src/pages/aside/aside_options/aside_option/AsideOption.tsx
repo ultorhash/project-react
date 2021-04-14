@@ -6,9 +6,9 @@ export class AsideOption extends Component<{imgLeft: string, title: string}>
     render()
     {
         return (
-            <StyledAsideOption href="https://www.google.pl" target="_blank">
+            <StyledAsideOption>
                 <img src={this.props.imgLeft} alt="" />
-                <span>{this.props.title}</span>
+                <a href="https://google.com">{this.props.title}</a>
             </StyledAsideOption>
         )
     }
