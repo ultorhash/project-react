@@ -11,9 +11,9 @@ export class NavOptions extends Component
     {
         return (
             <StyledNavOptions>
-                <Option img={house}/>
-                <Option img={comments}/>
-                <Option img={bell}/>
+                <Option imgOption={house} hasBackground={false}/>
+                <Option imgOption={comments} hasBackground={true}/>
+                <Option imgOption={bell} hasBackground={true}/>
             </StyledNavOptions>
         )
     }

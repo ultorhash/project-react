@@ -12,22 +12,22 @@ export class MainContainer extends Component
             <>
                 <Nav />
                 <Section>
-                <Router>
-                    <Switch>
-                        <Route path="/publications">
-                            publications
-                        </Route>
-                        <Route path="/ecosystem">
-                            ecosystem
-                        </Route>
-                        <Route path="/entities">
-                            entities
-                        </Route>
-                        <Route path="/">
-                            Home
-                        </Route>
-                    </Switch>
-                </Router>
+                    <Router>
+                        <Switch>
+                            <Route path="/publications">
+                                publications
+                            </Route>
+                            <Route path="/ecosystem">
+                                ecosystem
+                            </Route>
+                            <Route path="/entities">
+                                entities
+                            </Route>
+                            <Route path="/">
+                                Home
+                            </Route>
+                        </Switch>
+                    </Router>
                 </Section>
             </>
         )

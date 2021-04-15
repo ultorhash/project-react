@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { StyledPageLogo } from './PageLogoStyle';
-import logo from '../../../../media/entities2.png';
+import logo from '../../../../media/logo.png';
 
 export class PageLogo extends Component
 {
