@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledDropDownAccountInfo = styled.div`
-    height: 30px;
+    height: 100%;
     width: 100%;
     background-color: transparent;
     display: flex;
-    text-align: center;
+    text-align: left;
     align-items: center;
     text-decoration: none;
     color: dimgray;
@@ -13,10 +13,8 @@ export const StyledDropDownAccountInfo = styled.div`
     margin: 5% 0 5% 0;
 
     p {
-        margin-left: 5%;
         height: 100%;
         display: flex;
-        align-items: center;
         background-color: transparent;
         color: #2F4F4F;
         font-size: 16px;
@@ -26,7 +24,7 @@ export const StyledDropDownAccountInfo = styled.div`
         height: 100%;
         background-color: transparent;
         width: 15%;
-        margin-left: 5%;
+        margin: 0 5%;
         border-radius: 50%;
     }
 
@@ -35,5 +33,13 @@ export const StyledDropDownAccountInfo = styled.div`
         color: #6600ff;
         font-size: 12px;
         background-color: transparent;
+    }
+
+    div {
+        height: auto;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        display: block;
     }
 `;

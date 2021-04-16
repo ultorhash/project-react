@@ -14,7 +14,7 @@ export class DropDownOptions extends Component
     render()
     {
         return (
-            <StyledDropDownOptions>
+            <StyledDropDownOptions id="drop__down__options">
                 <p>Platform</p>
                 <DropDownOption imgLeft={house2} title="Home"/>
                 <DropDownOption imgLeft={publications} title="Publications"/>

@@ -13,4 +13,5 @@ export const StyledDropDownHome = styled.div`
     font-size: 24px;
     font-weight: bold;
     position: relative;
+    border: 1px solid red;
 `;

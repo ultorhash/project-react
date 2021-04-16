@@ -18,6 +18,7 @@ export class Option extends Component<{imgOption: string, hasBackground: boolean
             return (
                 <StyledOption href="https://google.com">
                     <img src={this.props.imgOption} alt="" />
+                    <span>5</span>
                 </StyledOption>
             )
         }

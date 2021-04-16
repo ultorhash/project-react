@@ -8,8 +8,10 @@ export class DropDownAccountInfo extends Component<{profileImage: string, user: 
         return (
             <StyledDropDownAccountInfo>
                 <img src={this.props.profileImage} alt="" />
-                <p>{this.props.user}</p><br />
-                <a href="https://google.com">See profile</a>
+                <div>
+                    <p>{this.props.user}</p>
+                    <a href="https://google.com">See profile</a>
+                </div>               
             </StyledDropDownAccountInfo>
         )
     }
