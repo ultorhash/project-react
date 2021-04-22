@@ -6,4 +6,11 @@ export const StyledDropDownMenuSearch = styled.input`
     height: 30px;
     padding: 4px;
     background-color: white;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    :focus {
+        outline: none;
+    }
 `;

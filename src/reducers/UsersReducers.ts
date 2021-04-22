@@ -1,13 +1,16 @@
 import { ISingleUser } from '../entities/Users';
+import { ISingleUserPhoto } from '../entities/UsersPhotos';
 import * as actionTypes from '../actions/actionTypes/UserTypes';
 
 export interface IUsersReducer
 {
     usersList: ISingleUser[];
+    usersPhotosList: ISingleUserPhoto[];
 }
 
 const defaultState = (): IUsersReducer => ({
-    usersList: []
+    usersList: [],
+    usersPhotosList: []
 });
 
 export default (state = defaultState(), action: any) => {
@@ -18,6 +21,14 @@ export default (state = defaultState(), action: any) => {
             return {
                 ...state,
                 usersList: payload.usersList
+            }
+        }
+
+        case actionTypes.GET_USERS_PHOTOS: {
+            const payload: actionTypes.IUserTypes['GET_USERS_PHOTOS'] = action;
+            return {
+                ...state,
+                usersPhotosList: payload.usersPhotosList
             }
         }
 

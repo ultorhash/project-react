@@ -9,4 +9,5 @@ export const StyledNavSearchInput = styled.input`
     border-radius: 10px 0 0 10px;
     text-align: center;
     font-size: 16px;
+    outline: none;
 `;

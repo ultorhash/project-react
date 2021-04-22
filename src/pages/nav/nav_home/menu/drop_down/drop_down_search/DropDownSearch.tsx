@@ -16,14 +16,14 @@ export class DropDownMenuSearch extends Component
         const OptionsDiv = document.getElementById('drop__down__options')!;
         let options = OptionsDiv.querySelectorAll('a')!;
 
-        if (SearchValue.length != 0)
+        if (SearchValue.length !== 0)
         {
             for (let i = 0; i < options.length; i++)
             {
                 let optionTitle = (options[i].children[1] as HTMLParagraphElement).innerHTML.toLowerCase();
                 let titleBegin = optionTitle.substring(0, SearchValue.length).toLowerCase();
 
-                options[i].style.display = titleBegin == SearchValue ? "flex" : "none";
+                options[i].style.display = titleBegin === SearchValue ? "flex" : "none";
             }
         }
         else options.forEach(option => option.style.display = "flex");

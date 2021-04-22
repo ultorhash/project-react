@@ -9,8 +9,13 @@ export const StyledNavSearchButton = styled.button`
     border: 2px solid lightgray;
     border-left: none;
     border-radius: 0 10px 10px 0;
+    outline: none;
 
     img {
         background-color: transparent;
+    }
+
+    :hover {
+        cursor: pointer;
     }
 `;
