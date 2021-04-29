@@ -7,11 +7,11 @@ import profilePhoto from '../../../../../media/profile-photo.png';
 
 export const AsideProfilePhoto: FC = () =>
 {
-    const { usersPhotosList } = useSelector<IState, IUsersReducer>(globalState => ({
+    const { usersList } = useSelector<IState, IUsersReducer>(globalState => ({
         ...globalState.users
     }));
 
     return (
-        <StyledAsideProfilePhoto src={usersPhotosList.length !== 0 ? usersPhotosList[1].url : profilePhoto} />
+        <StyledAsideProfilePhoto src={usersList?.data[0].avatar} />
     )
 }

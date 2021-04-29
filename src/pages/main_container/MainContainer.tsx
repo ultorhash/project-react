@@ -5,18 +5,18 @@ import { Section } from '../section/section/Section';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { getUsers } from '../../actions/UsersActions';
-import { getUsersPhotos } from '../../actions/UsersActions';
+import { getUsers2 } from '../../actions/UsersActions';
 
 type GetUsers = ReturnType<typeof getUsers>;
-type GetUsersPhotos = ReturnType<typeof getUsersPhotos>;
+type GetUsers2 = ReturnType<typeof getUsers2>;
 
 export const MainContainer: FC = () => {
 
     const Dispatch = useDispatch();
     useEffect(() => {
-        Dispatch<GetUsers>(getUsers());
-        Dispatch<GetUsersPhotos>(getUsersPhotos());
-    }, [])
+        // Dispatch<GetUsers>(getUsers());
+        Dispatch<GetUsers2>(getUsers2());
+    })
 
     return (
         <>

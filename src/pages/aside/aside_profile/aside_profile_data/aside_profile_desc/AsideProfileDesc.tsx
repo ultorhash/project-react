@@ -13,8 +13,7 @@ export const AsideProfileDesc: FC = () =>
     return (
         <StyledAsideProfileDesc>
             <h3>
-                {usersList.length !== 0 ?
-                usersList[1].name : ""}
+                {usersList?.data[0].first_name + " " + usersList?.data[0].last_name}
             </h3>
             <p>Job title - Company</p>
         </StyledAsideProfileDesc>

@@ -5,6 +5,8 @@ import { SearchInput } from '../search_input/SearchInput';
 import { Followed } from '../followed/Followed'; 
 
 import search from '../../../../../media/search.png';
+import signal from '../../../../../media/signal.png';
+import arrow_down from '../../../../../media/arrow-down.png';
 
 export class ResumeWorkHeader extends Component
 {
@@ -14,7 +16,7 @@ export class ResumeWorkHeader extends Component
             <StyledResumeWorkHeader>
                 <Title />
                 <SearchInput imgSrc={search}/>
-                <Followed />
+                <Followed imgLeft={signal} imgRight={arrow_down}/>
             </StyledResumeWorkHeader>
         )
     }

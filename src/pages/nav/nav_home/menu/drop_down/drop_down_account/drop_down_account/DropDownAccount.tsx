@@ -19,7 +19,12 @@ export const DropDownAccount: FC = () =>
     return (
         <StyledDropDownAccount>
             <p>Account</p>
-            {<DropDownAccountInfo profileImage={profileImage} user={usersList.length != 0 ? usersList[1].name : ""}/>}
+
+            <DropDownAccountInfo profileImage={usersList?.data == undefined ?
+                profileImage : usersList?.data[0].avatar}
+                                user={usersList?.data == undefined ?
+                "" : usersList?.data[0].first_name + " " + usersList?.data[0].last_name}/>
+
             <DropDownAccountOption imgLeft={privacy} title="Privacy"/>
             <DropDownAccountOption imgLeft={settings} title="Settings"/>
         </StyledDropDownAccount>

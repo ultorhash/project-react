@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledTitle = styled.div`
     width: 60%;
-    border: 1px solid red;
     display: table;
     height: 100%;
 

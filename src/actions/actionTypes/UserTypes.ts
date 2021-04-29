@@ -1,8 +1,8 @@
 import { ISingleUser } from '../../entities/Users';
-import { ISingleUserPhoto } from '../../entities/UsersPhotos';
+import { ISingleUserData } from '../../entities/Users';
 
 export const GET_USERS = 'GET_USERS';
-export const GET_USERS_PHOTOS = 'GET_USERS_PHOTOS';
+export const GET_USERS_2 = 'GET_USERS_2';
 
 export interface IUserTypes
 {
@@ -10,7 +10,7 @@ export interface IUserTypes
         usersList: ISingleUser[];
     }
 
-    GET_USERS_PHOTOS: {
-        usersPhotosList: ISingleUserPhoto[];
+    GET_USERS_2: {
+        usersList: ISingleUserData;
     }
 }

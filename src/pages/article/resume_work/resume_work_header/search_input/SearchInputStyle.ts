@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 export const StyledSearchInput = styled.div`
     width: 20%;
-    border: 1px solid yellow;
     display: flex;
     height: 100%;
     justify-content: center;
-    padding: 1%;
+    padding: 5px;
 
     input[type="text"] {
-        width: 85%;
+        width: 80%;
         height: 100%;
         background-color: white;
         background-color: white;
@@ -25,14 +24,23 @@ export const StyledSearchInput = styled.div`
         font-weight: 400;
     }
 
-    img {
-        width: 15%;
+    button {
+        width: 20%;
         height: 100%;
+        text-align: center;
+        object-fit: fill;
         background-color: white;
-        border-radius: 0 5px 5px 0;
         border: 2px solid lightgray;
         border-left: none;
+        border-radius: 0 5px 5px 0;
         outline: none;
-        padding: 5px;
+
+        img {
+            background-color: transparent;
+        }
+
+        :hover {
+            cursor: pointer;
+        }
     }
 `;
