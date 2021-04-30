@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const StyledTitle = styled.div`
-    width: 60%;
+export const StyledWorkspacesHeader = styled.div`
+    width: 100%;
     display: table;
-    height: 100%;
+    height: 50px;
 
     h3 {
         color: #404040;
@@ -13,6 +13,6 @@ export const StyledTitle = styled.div`
         vertical-align: middle;
         display: table-cell;
         text-align: left;
-        padding-left: 2%;
+        padding-left: 1%;
     }
 `;

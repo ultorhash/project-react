@@ -7,7 +7,7 @@ export class Title extends Component
     {
         return (
             <StyledTitle>
-                <p>Resume your work</p>
+                <h3>Resume your work</h3>
             </StyledTitle>
         )
     }
