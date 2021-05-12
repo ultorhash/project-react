@@ -11,7 +11,6 @@ export const StyledSearchInput = styled.div`
         width: 80%;
         height: 100%;
         background-color: white;
-        background-color: white;
         border: 2px solid lightgray;
         border-right: none;
         border-radius: 5px 0 0 5px;

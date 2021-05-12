@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { StyledPublicationsImage } from './PublicationsImageStyle';
 
-import publications_image from '../../../../media/publications_image.png';
+import publications_image from '../../../../../media/publications_image.png';
 
 export class PublicationsImage extends Component
 {

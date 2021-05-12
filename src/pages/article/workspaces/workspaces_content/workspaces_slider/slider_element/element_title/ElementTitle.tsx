@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { StyledElementTitle } from './ElementTitleStyle';
+import { Link } from 'react-router-dom';
 
 export class ElementTitle extends Component<{title: string}>
 {
@@ -7,7 +8,7 @@ export class ElementTitle extends Component<{title: string}>
     {
         return (
             <StyledElementTitle>
-                <a href="https://www.google.com">{this.props.title}</a>
+                <Link to="/workspace" style={{textDecoration: "none"}}><p>{this.props.title}</p></Link>
             </StyledElementTitle>
         )
     }

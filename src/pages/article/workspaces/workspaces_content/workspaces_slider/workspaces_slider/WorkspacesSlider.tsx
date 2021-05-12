@@ -21,11 +21,11 @@ export class WorkspacesSlider extends Component
         return (
             <StyledWorkspacesSlider>
                 <Slider {...settings}>
-                    <SliderElement />
-                    <SliderElement />
-                    <SliderElement />
-                    <SliderElement />
-                    <SliderElement />
+                    <SliderElement title="Client contract" subtitle="Contract" users={150} />
+                    <SliderElement title="Supplier contract" subtitle="Contract" users={25} />
+                    <SliderElement title="Corporate" subtitle="Corporate" users={25} />
+                    <SliderElement title="Group" subtitle="Norms" users={25} />
+                    <SliderElement title="Client contract" subtitle="Contract" users={25} />
                 </Slider>
             </StyledWorkspacesSlider>
         )

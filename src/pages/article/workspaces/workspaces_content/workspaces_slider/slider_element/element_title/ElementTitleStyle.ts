@@ -7,7 +7,7 @@ export const StyledElementTitle = styled.div`
     text-align: right;
     padding: 2%;
 
-    a {
+    p {
         padding-right: 20%;
         background-color: white;
         text-decoration: none;

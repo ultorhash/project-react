@@ -6,7 +6,7 @@ import publications from '../../../../media/publications.png';
 import ecosystem from '../../../../media/ecosystem.png';
 import entities from '../../../../media/entities2.png';
 
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class AsideOptions extends Component
 {

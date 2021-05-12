@@ -3,19 +3,25 @@ import { FC } from 'react';
 import { Nav } from '../nav/nav/Nav';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-import { getUsers } from '../../actions/UsersActions';
+//import { getUsers } from '../../actions/UsersActions';
 import { getUsers2 } from '../../actions/UsersActions';
+import { getPublications } from '../../actions/PublicationsActions';
 import { Article } from '../article/article/Article';
 import styled from 'styled-components';
 import { Aside } from '../aside/aside/Aside';
+import { Entities } from '../entities/entities/Entities';
+import { Ecosystem } from '../ecosystem/ecosystem/Ecosystem';
+import { Publications } from '../publications/publications/Publications';
+import { Workspace } from '../workspace/workspace/Workspace';
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
 `;
 
-type GetUsers = ReturnType<typeof getUsers>;
+//type GetUsers = ReturnType<typeof getUsers>;
 type GetUsers2 = ReturnType<typeof getUsers2>;
+type GetPublications = ReturnType<typeof getPublications>;
 
 export const MainContainer: FC = () => {
 
@@ -23,6 +29,7 @@ export const MainContainer: FC = () => {
     useEffect(() => {
         // Dispatch<GetUsers>(getUsers());
         Dispatch<GetUsers2>(getUsers2());
+        Dispatch<GetPublications>(getPublications());
     })
 
     return (
@@ -31,19 +38,20 @@ export const MainContainer: FC = () => {
             <Wrapper>
                 <Aside />
                 <Switch>
-                    <Route exact path="/">
-                        <Article />
-                    </Route>
                     <Route path="/publications">
-                        <div>
-                            <p>cos1</p>
-                        </div>
+                        <Publications />
                     </Route>
                     <Route path="/ecosystem">
-                        cos2                       
+                        <Ecosystem />                      
                     </Route>
                     <Route path="/entities">
-                        cos
+                        <Entities />
+                    </Route>
+                    <Route exact path="/workspace">
+                        <Workspace />
+                    </Route>
+                    <Route exact path="/">
+                        <Article />
                     </Route>
                 </Switch>  
                 </Wrapper>   

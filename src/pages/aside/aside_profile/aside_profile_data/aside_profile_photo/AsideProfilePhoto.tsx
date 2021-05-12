@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { IState } from '../../../../../reducers';
 import { IUsersReducer } from '../../../../../reducers/UsersReducers';
 import { StyledAsideProfilePhoto } from './AsideProfilePhotoStyle';
-import profilePhoto from '../../../../../media/profile-photo.png';
 
 export const AsideProfilePhoto: FC = () =>
 {

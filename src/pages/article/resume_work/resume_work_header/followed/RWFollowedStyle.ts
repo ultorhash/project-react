@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledFollowed = styled.div`
+export const StyledRWFollowed = styled.div`
     width: 20%;
     display: flex;
     height: 100%;

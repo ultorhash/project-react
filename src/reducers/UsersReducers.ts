@@ -1,4 +1,4 @@
-import { ISingleUser } from '../entities/Users';
+//import { ISingleUser } from '../entities/Users';
 import { ISingleUserData } from '../entities/Users';
 import * as actionTypes from '../actions/actionTypes/UserTypes';
 
@@ -12,7 +12,7 @@ const defaultState = (): IUsersReducer => ({
     usersList: null
 });
 
-export default (state = defaultState(), action: any) => {
+const usersAction = (state = defaultState(), action: any) => {
     switch (action.type)
     {
         case actionTypes.GET_USERS: {
@@ -36,3 +36,5 @@ export default (state = defaultState(), action: any) => {
         }
     }
 }
+
+export default usersAction;

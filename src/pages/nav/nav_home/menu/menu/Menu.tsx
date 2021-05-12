@@ -3,6 +3,7 @@ import { StyledMenu } from './MenuStyle';
 import { DropDownMenu } from '../drop_down/drop_down/DropDown';
 import house from '../../../../../media/house2.png';
 import arrow from '../../../../../media/arrow-down.png';
+import { Link } from 'react-router-dom';
 
 export const DropDownHome: React.FC = () =>
 {
@@ -12,7 +13,9 @@ export const DropDownHome: React.FC = () =>
     return (
         <StyledMenu>
             <img src={house} alt="house2.png" />
-            <p>Home</p>
+            <Link to="/" style={{textDecoration: "none", backgroundColor: "transparent", color: "dimgray"}}>
+                <p>Home</p>
+            </Link>          
             <button onClick={toogle}><img src={arrow} alt="" /></button>
             {isOpen && (
                 <DropDownMenu />

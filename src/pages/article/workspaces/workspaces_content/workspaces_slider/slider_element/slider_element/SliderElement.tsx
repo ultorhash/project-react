@@ -7,16 +7,16 @@ import { ElementIcon } from '../element_icon/ElementIcon';
 
 import corpo_photo from '../../../../../../../media/corpo_photo.png';
 
-export class SliderElement extends Component
+export class SliderElement extends Component<{title: string, subtitle: string, users: number}>
 {
     render()
     {
         return (
             <StyledSliderElement>
                 <ElementPhoto imgSrc={corpo_photo}/>
-                <ElementTitle title="Client contract"/>
+                <ElementTitle title={this.props.title}/>
                 <ElementIcon />
-                <ElementDescription />
+                <ElementDescription subtitle={this.props.subtitle} users={this.props.users}/>
             </StyledSliderElement>
         )
     }

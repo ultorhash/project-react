@@ -20,9 +20,9 @@ export const DropDownAccount: FC = () =>
         <StyledDropDownAccount>
             <p>Account</p>
 
-            <DropDownAccountInfo profileImage={usersList?.data == undefined ?
+            <DropDownAccountInfo profileImage={usersList?.data === undefined ?
                 profileImage : usersList?.data[0].avatar}
-                                user={usersList?.data == undefined ?
+                                user={usersList?.data === undefined ?
                 "" : usersList?.data[0].first_name + " " + usersList?.data[0].last_name}/>
 
             <DropDownAccountOption imgLeft={privacy} title="Privacy"/>

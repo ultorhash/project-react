@@ -1,15 +1,20 @@
-import { Component } from 'react';
+import { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { IState } from '../../../../../../reducers';
+import { IPublicationsReducer } from '../../../../../../reducers/PublicationsReducers';
 import { StyledPublicationText } from '../publication_text/PublicationTextStyle';
 
-export class PublicationText extends Component
+export const PublicationText: FC = () => 
 {
-    render()
-    {
-        return (
-            <StyledPublicationText>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores,
-                dolorem doloremque. Iste numquam, eligendi sit porro totam cum nostrum sint!</p>
-            </StyledPublicationText>
-        )
-    }
+    const { publicationsList } = useSelector<IState, IPublicationsReducer>(globalState => ({
+        ...globalState.publications
+    }));
+
+    let rnd = Math.floor(Math.random() * publicationsList.length);
+
+    return (
+        <StyledPublicationText>
+            <p>{publicationsList[rnd]?.body}</p>
+        </StyledPublicationText>
+    )
 }
