@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { StyledDropDownAccountInfo } from './DropDownAccountInfoStyle';
+import { Link } from 'react-router-dom';
 
 export class DropDownAccountInfo extends Component<{profileImage: string, user: string}>
 {
@@ -10,7 +11,7 @@ export class DropDownAccountInfo extends Component<{profileImage: string, user: 
                 <img src={this.props.profileImage} alt="" />
                 <div>
                     <p>{this.props.user}</p>
-                    <a href="https://google.com">See profile</a>
+                    <Link to="/profile" style={{textDecoration: "none", backgroundColor: "transparent", color: "#4169E1"}}>See profile</Link>
                 </div>               
             </StyledDropDownAccountInfo>
         )

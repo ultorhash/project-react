@@ -13,6 +13,7 @@ import { Entities } from '../entities/entities/Entities';
 import { Ecosystem } from '../ecosystem/ecosystem/Ecosystem';
 import { Publications } from '../publications/publications/Publications';
 import { Workspace } from '../workspace/workspace/Workspace';
+import { Profile } from '../profile/profile/Profile';
 
 const Wrapper = styled.div`
     display: flex;
@@ -49,6 +50,9 @@ export const MainContainer: FC = () => {
                     </Route>
                     <Route exact path="/workspace">
                         <Workspace />
+                    </Route>
+                    <Route exact path="/profile">
+                        <Profile />
                     </Route>
                     <Route exact path="/">
                         <Article />

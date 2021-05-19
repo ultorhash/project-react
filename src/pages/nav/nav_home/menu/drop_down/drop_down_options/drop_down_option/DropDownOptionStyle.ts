@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledDropDownOption = styled.a`
+export const StyledDropDownOption = styled.div` /*it was 'a' before div*/
     height: 20px;
     width: 100%;
     background-color: transparent;

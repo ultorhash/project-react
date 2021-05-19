@@ -1,12 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 
 const FadeInAnimation = keyframes`
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 `;
 
 export const StyledDropDown = styled.div`
@@ -21,6 +17,7 @@ export const StyledDropDown = styled.div`
     border-radius: 10px;
     animation: fade 0.5s linear forwards;
     animation-name: ${FadeInAnimation};
+    z-index: 100;
 
     p {
         text-align: left;
