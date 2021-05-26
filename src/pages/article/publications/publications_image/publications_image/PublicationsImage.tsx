@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import { StyledPublicationsImage } from './PublicationsImageStyle';
+import { PublicationsText } from '../publications_text/PublicationsText';
 
-import publications_image from '../../../../../media/publications_image.png';
+import publications_image from '../../../../../media/buildings.jpg';
 
 export class PublicationsImage extends Component
 {
@@ -10,6 +11,7 @@ export class PublicationsImage extends Component
         return (
             <StyledPublicationsImage>
                 <img src={publications_image} alt="" />
+                <PublicationsText />
             </StyledPublicationsImage>
         )
     }

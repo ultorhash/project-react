@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledOption = styled.button`
+export const StyledOptionWithImg = styled.button`
     width: auto;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@ export const StyledOption = styled.button`
     padding: 0 1%;
     border: none;
     margin: 0 1%;
-    background-color: white;
+    background-color: transparent;
 
     :hover {
         cursor: pointer;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledPublicationsImage = styled.div`
+    position: relative;
     width: 30%;
 
     img {
