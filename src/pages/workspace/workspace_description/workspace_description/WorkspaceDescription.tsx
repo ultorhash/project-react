@@ -5,14 +5,14 @@ import { Content } from '../content/content/Content';
 
 import office from '../../../../media/office.jpg';
 
-export class WorkspaceDescription extends Component
+export class WorkspaceDescription extends Component<{title: string}>
 {
     render()
     {
         return (
             <StyledWorkspaceDescription>
                 <Photo img={office}/>
-                <Content />
+                <Content title={this.props.title}/>
             </StyledWorkspaceDescription>
         )
     }

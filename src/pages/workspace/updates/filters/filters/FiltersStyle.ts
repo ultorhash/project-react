@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const StyledStructs = styled.div`
+export const StyledFilters = styled.div`
     width: 100%;
-    height: auto;
     display: flex;
-    margin-top: 2%;
+    margin: 0.5% 0;
+    margin-top: 3%;
     background-color: transparent;
 `;

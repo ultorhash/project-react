@@ -7,5 +7,5 @@ export const StyledWorkspaceStructs = styled.div`
     margin-top: 2%;
     border-radius: 10px;
     padding: 2%;
-    background-color: #E8E8E8;
+    background-color: gainsboro;
 `;

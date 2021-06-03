@@ -1,13 +1,13 @@
 import { Component } from 'react';
 import { StyledTitle } from './TitleStyle';
 
-export class Title extends Component<{title: string}>
+export class Title extends Component
 {
     render()
     {
         return (
             <StyledTitle>
-                <h1>{this.props.title}</h1>
+                <h2>Latest updates</h2>
             </StyledTitle>
         )
     }
