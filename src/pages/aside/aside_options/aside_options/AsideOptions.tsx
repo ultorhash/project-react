@@ -2,9 +2,9 @@ import { Component } from 'react';
 import { StyledAsideOptions } from './AsideOptionsStyle';
 import { AsideOption } from '../aside_option/AsideOption';
 
-import publications from '../../../../media/publications.png';
-import ecosystem from '../../../../media/ecosystem.png';
-import entities from '../../../../media/entities2.png';
+import publications from '../../../../media/publications.svg';
+import ecosystem from '../../../../media/ecosystem.svg';
+import entities from '../../../../media/entities2.svg';
 
 import { Link } from 'react-router-dom';
 

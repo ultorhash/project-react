@@ -4,8 +4,6 @@ import { Title } from '../title/Title';
 import { SearchInput } from '../search_input/SearchInput'; 
 import { RWFollowed } from '../followed/RWFollowed'
 
-import search from '../../../../../media/search.svg';
-
 export class ResumeWorkHeader extends Component
 {
     render()
@@ -13,7 +11,7 @@ export class ResumeWorkHeader extends Component
         return (
             <StyledResumeWorkHeader>
                 <Title />
-                <SearchInput imgSrc={search}/>
+                <SearchInput />
                 <RWFollowed />
             </StyledResumeWorkHeader>
         )

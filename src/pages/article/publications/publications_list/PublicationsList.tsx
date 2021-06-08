@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { StyledPublicationsList } from './PublicationsListStyle';
 import { Publication } from '../publication/publication/Publication';
+import { Link } from 'react-router-dom';
 
 export class PublicationsList extends Component
 {
@@ -12,7 +13,7 @@ export class PublicationsList extends Component
                 <Publication />
                 <Publication />
                 <Publication />
-                <a href="https://google.com">See more publications</a>
+                <Link to="/publications">See more publications</Link>
             </StyledPublicationsList>
         )
     }

@@ -6,26 +6,31 @@ export class DropDownMenuSearch extends Component
     render()
     {
         return (
-            <StyledDropDownMenuSearch id="drop__down__search" type="text" placeholder="Filter..." onInput={this.filter}/>
+            <StyledDropDownMenuSearch id="drop-down-search" type="text" placeholder="Filter..." onChange={this.filter}/>
         )
     }
 
     filter()
     {
-        const SearchValue = (document.getElementById('drop__down__search')! as HTMLInputElement).value;
-        const OptionsDiv = document.getElementById('drop__down__options')!;
-        let options = OptionsDiv.querySelectorAll('a')!;
+        let inputValue: string = (document.getElementById("drop-down-search") as HTMLInputElement).value;
+        let elements: Element[] = Array.from(document.getElementsByClassName("nav-option"));
 
-        if (SearchValue.length !== 0)
+        if (inputValue.length !== 0)
         {
-            for (let i = 0; i < options.length; i++)
-            {
-                let optionTitle = (options[i].children[1] as HTMLParagraphElement).innerHTML.toLowerCase();
-                let titleBegin = optionTitle.substring(0, SearchValue.length).toLowerCase();
+            elements.forEach(el => {
+                console.log(el.children[1].textContent);
 
-                options[i].style.display = titleBegin === SearchValue ? "flex" : "none";
-            }
+                if (!(el.children[1].textContent?.substr(0, inputValue.length).toLowerCase() === inputValue.toLowerCase()))
+                    el.setAttribute("style", "display: none");
+                else
+                    el.setAttribute("style", "display: flex");
+            })
         }
-        else options.forEach(option => option.style.display = "flex");
+        else
+        {
+            elements.forEach(el => {
+                el.setAttribute("style", "display: flex");
+            })
+        } 
     }
 }

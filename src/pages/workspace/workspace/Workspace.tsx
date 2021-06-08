@@ -7,6 +7,7 @@ import { useLocation } from 'react-router';
 
 interface StateType {
     title: string;
+    img: string;
 }
 
 export const Workspace: FC = () =>
@@ -15,7 +16,7 @@ export const Workspace: FC = () =>
 
     return (
         <StyledWorkspace>
-            <WorkspaceDescription title={state.title}/>
+            <WorkspaceDescription title={state.title} img={state.img}/>
             <WorkspaceStructs />
             <Updates />
         </StyledWorkspace>

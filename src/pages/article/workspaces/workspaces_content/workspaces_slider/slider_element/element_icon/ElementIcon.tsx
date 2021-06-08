@@ -1,15 +1,13 @@
 import { Component } from 'react';
 import { StyledElementIcon } from './ElementIconStyle';
 
-import entities from '../../../../../../../media/entities2.svg';
-
-export class ElementIcon extends Component
+export class ElementIcon extends Component<{img: string}>
 {
     render()
     {
         return (
             <StyledElementIcon>
-                <img src={entities} alt="" />
+                <img src={this.props.img} alt="" />
             </StyledElementIcon>
         )
     }

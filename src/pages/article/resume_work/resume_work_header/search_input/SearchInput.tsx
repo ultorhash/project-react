@@ -1,39 +1,42 @@
-import { Component } from 'react';
+import { Component, FormEvent } from 'react';
 import { StyledSearchInput } from '../search_input/SearchInputStyle';
 
-export class SearchInput extends Component<{imgSrc: string}>
+import search from '../../../../../media/search.svg';
+
+export class SearchInput extends Component
 {
     render()
     {
         return (
             <StyledSearchInput>
-                <input type="text" placeholder="Filter by title..." id="resume__work__search__input" onInput={this.filter}/>
-                <button><img src={this.props.imgSrc} alt="" /></button>
+                <input type="text" placeholder="Filter by title..." id="search-resume"
+                onChange={(element: FormEvent<HTMLInputElement>) => this.filter(element)}/>
+                <button><img src={search} alt="" /></button>
             </StyledSearchInput>
         )
     }
 
-    filter()
+    filter(element: FormEvent<HTMLInputElement>)
     {
-        const InputValue = (document.getElementById('resume__work__search__input')! as HTMLInputElement).value;
-        const ResumeWorkDiv = document.getElementById('resume__work__elements')!;
-        let elements = ResumeWorkDiv.getElementsByClassName('resume__work__element')!;
+        let inputValue: string = (document.getElementById("search-resume") as HTMLInputElement).value;
+        let elements: Element[] = Array.from(document.getElementsByClassName("resume-element"));
 
-        if (InputValue.length !== 0)
+        if (inputValue.length !== 0)
         {
-            for (let i = 0; i < elements.length; i++)
-            {
-                let element = (elements[i] as HTMLElement);
-                let elementTitle = element.children[0];
+            elements.forEach(el => {
+                console.log(el.children[0].textContent);
 
-                if (!(elementTitle.innerHTML.substr(0, InputValue.length).toLowerCase() === InputValue.toLowerCase()))
-                    element.style.display = "none";              
-            }
+                if (!(el.children[0].textContent?.substr(0, inputValue.length).toLowerCase() === inputValue.toLowerCase()))
+                    el.setAttribute("style", "display: none");
+                else
+                    el.setAttribute("style", "display: block");
+            })
         }
         else
         {
-            for (let i = 0; i < elements.length; i++)
-                (elements[i] as HTMLElement).style.display = "block";
-        }
+            elements.forEach(el => {
+                el.setAttribute("style", "display: block");
+            })
+        }    
     }
 }

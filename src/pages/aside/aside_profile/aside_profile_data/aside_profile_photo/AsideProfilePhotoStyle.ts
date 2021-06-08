@@ -5,5 +5,7 @@ export const StyledAsideProfilePhoto = styled.img`
     height: 100px;
     border-radius: 50%;
     display: block;
-    margin: 20px auto 10px auto;
+    margin: 0 auto 0 auto;
+    padding: 1%;
+    background-color: transparent;
 `;

@@ -2,10 +2,11 @@ import { Component } from 'react';
 import { StyledAsideProfileOptions } from './AsideProfileOptionsStyle';
 import { AsideProfileOption } from '../aside_profile_option/AsideProfileOption';
 
-import people from '../../../../../media/people.png';
-import userPlus from '../../../../../media/user-plus.png';
-import plus from '../../../../../media/plus.png';
-import publications from '../../../../../media/publications.png';
+import people from '../../../../../media/people.svg';
+import userPlus from '../../../../../media/user-plus.svg';
+import plus from '../../../../../media/plus.svg';
+import publications from '../../../../../media/publications.svg';
+import { Link } from 'react-router-dom';
 
 export class AsideProfileOptions extends Component
 {
@@ -13,8 +14,8 @@ export class AsideProfileOptions extends Component
     {
         return (
             <StyledAsideProfileOptions>
-                <AsideProfileOption imgLeft={people} imgRight={userPlus} title="Your network"/>
-                <AsideProfileOption imgLeft={publications} imgRight={plus} title="Your publications"/>
+                <Link to="/network" style={{textDecoration: "none"}}><AsideProfileOption imgLeft={people} imgRight={userPlus} title="Your network"/></Link>
+                <Link to="/publications" style={{textDecoration: "none"}}><AsideProfileOption imgLeft={publications} imgRight={plus} title="Your publications"/></Link>
             </StyledAsideProfileOptions>
         )
     }

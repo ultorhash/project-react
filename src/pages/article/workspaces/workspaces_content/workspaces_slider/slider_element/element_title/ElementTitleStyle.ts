@@ -4,11 +4,11 @@ export const StyledElementTitle = styled.div`
     background-color: white;    
     height: 70px;
     width: 100%;
-    text-align: right;
+    text-align: left;
     padding: 2%;
 
     p {
-        padding-right: 20%;
+        padding-left: 35%;
         background-color: white;
         text-decoration: none;
         font-weight: 600;

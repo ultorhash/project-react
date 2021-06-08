@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { StyledEntities } from './EntitiesStyle';
+import { StyledSubpage } from '../../reused_components/subpage/SubpageStyle';
 import { EntitiesHeader } from '../entities_header/entities_header/EntitiesHeader';
 import { EntitiesOptions } from '../entities_options/entities_options/EntitiesOptions';
 import { EntitiesElements } from '../entities_elements/entities_elements/EntitiesElements';
@@ -14,13 +14,13 @@ export const Entities: FC = () =>
     const showFilters = () => filters === true ? setIsOpen(false) : setIsOpen(true);
 
     return (
-        <StyledEntities>
+        <StyledSubpage style={{backgroundColor: "white"}}>
             <EntitiesHeader changeLayout={changeLayout} isTile={current_view}/>
             <EntitiesOptions showFilters={showFilters}/>
             {filters && (
                 <EntitiesFilters />
             )}
             <EntitiesElements isTile={current_view}/>
-        </StyledEntities>
+        </StyledSubpage>
     )
 }

@@ -11,9 +11,13 @@ export const StyledPublicationsText = styled.div`
         background-color: transparent;
     }
 
+    p:nth-child(1) {
+        margin-bottom: 5%;
+    }
+
     p, span {
         color: white;
         font-size: 14px;
-        font-weight: bold;
+        font-weight: 500;
     }
 `;

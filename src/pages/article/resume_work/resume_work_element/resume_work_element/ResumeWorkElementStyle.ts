@@ -6,7 +6,7 @@ export const StyledResumeWorkElement = styled.div`
     height: auto;
     border-radius: 5px;
     border: 1px solid lightgray;
-    margin-top: 1%;
+    margin: 1% 0;
     padding: 5px 15px;
     box-shadow: 0 2px 0 lightgray;
     display: block;

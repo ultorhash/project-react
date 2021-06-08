@@ -1,0 +1,30 @@
+.pagination-container {
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.pagination-container li {
+    background-color: transparent;
+}
+
+.pagination-container a {
+    color: #009999;
+    cursor: pointer;
+    margin: 8px;
+    font-weight: 500;
+    background-color: whitesmoke;
+}
+
+.pagination-container a:hover {
+    color: #404040;
+}
+
+.pagination-active a {
+    color: #404040;
+    border-bottom: 2px solid #404040;;
+}

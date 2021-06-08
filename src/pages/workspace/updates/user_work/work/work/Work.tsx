@@ -7,7 +7,7 @@ export class Work extends Component<{title: string, category: string, textColor:
     render()
     {
         return (
-            <StyledWork>
+            <StyledWork className="work-element">
                 <h2>{this.props.title}</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus sed
                 iste atque ipsam voluptatum! Est nesciunt dolores sit molestiae saepe? Lorem

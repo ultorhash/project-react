@@ -9,6 +9,7 @@ export const StyledDropDownMenuSearch = styled.input`
     outline: none;
     border: 1px solid lightgray;
     border-radius: 5px;
+    margin: 2% 0;
 
     :focus {
         outline: none;

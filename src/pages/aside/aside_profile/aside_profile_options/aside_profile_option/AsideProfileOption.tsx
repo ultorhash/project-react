@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { StyledAsideProfileOption } from './AsideProfileOptionStyle';
 
-export class AsideProfileOption extends Component<{ imgLeft: string, imgRight: string, title: string }>
+export class AsideProfileOption extends Component<{imgLeft: string, imgRight: string, title: string}>
 {
     render()
     {

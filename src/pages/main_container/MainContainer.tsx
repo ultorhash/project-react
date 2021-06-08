@@ -14,6 +14,7 @@ import { Ecosystem } from '../ecosystem/ecosystem/Ecosystem';
 import { Publications } from '../publications/publications/Publications';
 import { Workspace } from '../workspace/workspace/Workspace';
 import { Profile } from '../profile/profile/Profile';
+import { Network } from '../network/network/Network';
 
 const Wrapper = styled.div`
     display: flex;
@@ -50,6 +51,9 @@ export const MainContainer: FC = () => {
                     </Route>
                     <Route exact path="/workspace">
                         <Workspace />
+                    </Route>
+                    <Route exact path="/network">
+                        <Network />
                     </Route>
                     <Route exact path="/profile">
                         <Profile />
