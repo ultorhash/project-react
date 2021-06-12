@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { StyledFeesGrid } from './FeesGridStyle';
-import { ColumnTitle } from '../../../reused_components/ColumnTitle/ColumnTitle';
+import { ColumnTitle } from '../../../reused_components/columnTitle/ColumnTitle';
 import { GridData } from '../../../reused_components/GridData/GridData';
 
 export class FeesGrid extends Component

@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { StyledDataGrid } from './DataGridStyle';
 import { GridData } from '../../../reused_components/GridData/GridData';
-import { ColumnTitle } from '../../../reused_components/ColumnTitle/ColumnTitle';
+import { ColumnTitle } from '../../../reused_components/columnTitle/ColumnTitle';
 
 export class DataGrid extends Component<{isFirm: boolean}>
 {

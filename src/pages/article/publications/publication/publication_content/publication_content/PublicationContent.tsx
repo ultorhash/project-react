@@ -3,31 +3,21 @@ import { StyledPublicationsContent } from '../publication_content/PublicationCon
 import { PublicationText } from '../publication_text/PublicationText';
 import { PublicationAuthor } from '../publication_author/PublicationAuthor';
 
-import { useSelector } from 'react-redux';
-import { IState } from '../../../../../../reducers';
-import { IUsersReducer } from '../../../../../../reducers/UsersReducers';
+interface IPublication {
+    userName: string;
+    content: string;
+    userPhoto: string;
+}
 
-import profile_photo from '../../../../../../media/profile-photo.png';
-
-export const PublicationContent: FC = () =>
+export const PublicationContent: FC<IPublication> = (props) =>
 {
-    const { usersList } = useSelector<IState, IUsersReducer>(globalState => ({
-        ...globalState.users
-    }));
-
-    let userNumber: number = 0;
-    if (usersList?.data.length !== undefined)
-    {
-        userNumber = Math.floor(Math.random() * usersList?.data.length);
-    }    
-
     return (
         <StyledPublicationsContent>
-            <PublicationText />
+            <PublicationText content={props.content}/>
             <PublicationAuthor
                 postDate={new Date().toLocaleDateString()}
-                imgAuthor={usersList?.data[userNumber].avatar === undefined ? profile_photo : usersList?.data[userNumber].avatar}
-                author={usersList?.data[userNumber].first_name + " " + usersList?.data[userNumber].last_name}
+                imgAuthor={props.userPhoto}
+                author={props.userName}
             />
         </StyledPublicationsContent>
     )

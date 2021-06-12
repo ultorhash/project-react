@@ -1,21 +1,21 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { IState } from '../../../../../reducers';
-import { IUsersReducer } from '../../../../../reducers/UsersReducers';
+import { ISingleUserReducer } from '../../../../../reducers/SingleUsersReducers';
 import { StyledAsideProfileDesc } from './AsideProfileDescStyle';
 
-export const AsideProfileDesc: FC = () =>
+export const AsideProfileDesc: FC<{company: string}> = (props) =>
 {
-    const { usersList } = useSelector<IState, IUsersReducer>(globalState => ({
-        ...globalState.users
+    const { singleUsersList } = useSelector<IState, ISingleUserReducer>(globalState => ({
+        ...globalState.singleUsers
     }));
 
     return (
         <StyledAsideProfileDesc>
             <h3>
-                {usersList?.data[0].first_name + " " + usersList?.data[0].last_name}
+                {singleUsersList[3]?.name}
             </h3>
-            <p>Job title - Company</p>
+            <p>{props.company}</p>
         </StyledAsideProfileDesc>
     )
 }

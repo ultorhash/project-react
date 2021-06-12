@@ -3,38 +3,42 @@ import { StyledResumeWork } from '../resume_work/ResumeWorkStyle';
 import { ResumeWorkHeader } from '../resume_work_header/resume_work_header/ResumeWorkHeader';
 import { ResumeWorkElement } from '../resume_work_element/resume_work_element/ResumeWorkElement';
 import ReactPaginate from 'react-paginate';
-import '../../../styles/PaginationStyles.css';
+import { useSelector } from 'react-redux';
+import { IPublicationsReducer } from '../../../../reducers/PublicationsReducers';
+import { IState } from '../../../../reducers';
 
-interface IResumeWorkElement
-{
-    title: string;
-}
+import '../../../styles/PaginationStyles.css';
+import { ISingleUserReducer } from '../../../../reducers/SingleUsersReducers';
 
 export const ResumeWork: FC = () =>
 {
-    let ElementList: IResumeWorkElement[] = [
-        { title: "World Company SAS" }, { title: "Contract #145" }, { title: "Corporate chages" },
-        { title: "New employees" }, { title: "Those were the days..." }, { title: "New office" },
-        { title: "Two teams unite" }, { title: "New target for 2021" }, { title: "Company takeover" },
-        { title: "Free courses" }, { title: "Pay rises for employees" }, { title: "World Company SARL" },
-        { title: "The best salesman" }, { title: "Larger branch" }, { title: "Meeting with the bosses" }
-    ]
+    const { publicationsList } = useSelector<IState, IPublicationsReducer>(globalState => ({
+        ...globalState.publications
+    }));
+
+    const { singleUsersList } = useSelector<IState, ISingleUserReducer>(globalState => ({
+        ...globalState.singleUsers
+    }))
 
     const [pageNumber, setPageNumber] = useState(0);
-
-    const worksPerPage = 5;
+    const worksPerPage = 9;
     const pagesVisited = pageNumber * worksPerPage;
-    const pageCount = Math.ceil(ElementList.length / worksPerPage);
+    const pageCount = Math.ceil(publicationsList.length / worksPerPage);
 
     const changePage = ({selected}: any /* number? */) =>
     {
         setPageNumber(selected);
     }
 
-    const displayElements = ElementList.slice(pagesVisited, pagesVisited + worksPerPage).map(w => 
+    const displayElements = publicationsList.slice(pagesVisited, pagesVisited + worksPerPage).map(w => 
     {
+        let userName = "";
+        singleUsersList.forEach(u => {
+            if (w.userId === u.id) userName = u.name;
+        })
+
         return (
-            <ResumeWorkElement title={w.title} />
+            <ResumeWorkElement title={w.title} content={w.body} author={userName}/>
         )
     });
 

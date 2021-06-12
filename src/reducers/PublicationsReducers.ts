@@ -1,8 +1,7 @@
 import { ISinglePublication } from '../entities/Publications';
 import * as actionTypes from '../actions/actionTypes/PublicationsTypes';
 
-export interface IPublicationsReducer
-{
+export interface IPublicationsReducer {
     publicationsList: ISinglePublication[]
 }
 

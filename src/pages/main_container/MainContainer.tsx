@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Nav } from '../nav/nav/Nav';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch } from 'react-redux';
-//import { getUsers } from '../../actions/UsersActions';
+import { getSingleUsers } from '../../actions/SingleUsersActions';
 import { getUsers2 } from '../../actions/UsersActions';
 import { getPublications } from '../../actions/PublicationsActions';
 import { Article } from '../article/article/Article';
@@ -15,13 +15,14 @@ import { Publications } from '../publications/publications/Publications';
 import { Workspace } from '../workspace/workspace/Workspace';
 import { Profile } from '../profile/profile/Profile';
 import { Network } from '../network/network/Network';
+import { People } from '../people/people/People';
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
 `;
 
-//type GetUsers = ReturnType<typeof getUsers>;
+type GetSingleUsers = ReturnType<typeof getSingleUsers>;
 type GetUsers2 = ReturnType<typeof getUsers2>;
 type GetPublications = ReturnType<typeof getPublications>;
 
@@ -29,7 +30,7 @@ export const MainContainer: FC = () => {
 
     const Dispatch = useDispatch();
     useEffect(() => {
-        // Dispatch<GetUsers>(getUsers());
+        Dispatch<GetSingleUsers>(getSingleUsers());
         Dispatch<GetUsers2>(getUsers2());
         Dispatch<GetPublications>(getPublications());
     })
@@ -57,6 +58,9 @@ export const MainContainer: FC = () => {
                     </Route>
                     <Route exact path="/profile">
                         <Profile />
+                    </Route>
+                    <Route exact path="/people">
+                        <People />
                     </Route>
                     <Route exact path="/">
                         <Article />

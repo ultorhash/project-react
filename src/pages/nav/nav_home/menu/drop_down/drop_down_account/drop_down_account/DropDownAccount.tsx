@@ -9,6 +9,7 @@ import { IUsersReducer } from '../../../../../../../reducers/UsersReducers';
 import profileImage from '../../../../../../../media/profile-photo.png';
 import privacy from '../../../../../../../media/privacy.png';
 import settings from '../../../../../../../media/settings.png';
+import { ISingleUserReducer } from '../../../../../../../reducers/SingleUsersReducers';
 
 export const DropDownAccount: FC = () => 
 {
@@ -16,14 +17,16 @@ export const DropDownAccount: FC = () =>
         ...globalState.users
     }));
 
+    const { singleUsersList } = useSelector<IState, ISingleUserReducer>(globalState => ({
+        ...globalState.singleUsers
+    }));
+
     return (
         <StyledDropDownAccount>
             <p>Account</p>
 
             <DropDownAccountInfo profileImage={usersList?.data === undefined ?
-                profileImage : usersList?.data[0].avatar}
-                                user={usersList?.data === undefined ?
-                "" : usersList?.data[0].first_name + " " + usersList?.data[0].last_name}/>
+                profileImage : usersList?.data[2].avatar} user={singleUsersList[3]}/>
 
             <DropDownAccountOption imgLeft={privacy} title="Privacy"/>
             <DropDownAccountOption imgLeft={settings} title="Settings"/>
